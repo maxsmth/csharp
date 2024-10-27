@@ -17,7 +17,6 @@ namespace task6
             Console.WriteLine("Для выхода нажмите любую клавишу");
             Console.ReadKey();
         }
-
         static string LeetText(string s)
         {
             return s = s
