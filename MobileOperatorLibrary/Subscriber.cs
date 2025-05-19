@@ -13,6 +13,10 @@ namespace MobileOperatorLibrary
         public readonly string ContractNumber;
         public readonly PaymentType PaymentType;
 
+        public int UsedMinutes { get; set; }
+        public int SentMessages { get; set; }
+        public int UsedMB { get; set; }
+
         public Subscriber(
             string name,
             string surname,
