@@ -2,7 +2,7 @@
 
 namespace MobileOperatorLibrary
 {
-    public class Subscriber
+    public class Subscriber : IComparable<Subscriber>
     {
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -12,6 +12,10 @@ namespace MobileOperatorLibrary
 
         public readonly string ContractNumber;
         public readonly PaymentType PaymentType;
+
+        public int UsedMinutes { get; set; }
+        public int SentMessages { get; set; }
+        public int UsedMB { get; set; }
 
         public Subscriber(
             string name,
@@ -38,6 +42,12 @@ namespace MobileOperatorLibrary
             info[0] = $"{Name} {Surname}";
             info[1] = $"Phone: {PhoneNumber}. Contract: {ContractNumber}. Tariff: {TariffName}. Payment Type: {PaymentType}. Balance: {Balance}";
             return info;
+        }
+        public int CompareTo(Subscriber other)
+        {
+            if (Surname != other.Surname)
+                return Surname.CompareTo(other.Surname);
+            return Name.CompareTo(other.Name);
         }
     }
 }

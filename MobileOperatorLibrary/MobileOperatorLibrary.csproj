@@ -41,9 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CallsService.cs" />
+    <Compile Include="InternetService.cs" />
+    <Compile Include="Operator.cs" />
+    <Compile Include="OperatorName.cs" />
+    <Compile Include="PhoneNumberComparer.cs" />
+    <Compile Include="Service.cs" />
     <Compile Include="Subscriber.cs" />
     <Compile Include="PaymentType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextMessageService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
